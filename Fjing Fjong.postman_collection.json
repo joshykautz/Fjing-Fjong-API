@@ -1,0 +1,777 @@
+{
+	"info": {
+		"_postman_id": "96b7a223-e2c1-42e1-9bd2-f40c935bc3e4",
+		"name": "Fjing Fjong",
+		"description": "CRUD Operations for Player and Match entities",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Production",
+			"item": [
+				{
+					"name": "Player",
+					"item": [
+						{
+							"name": "Get Players",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.fjingfjong.com/player",
+									"protocol": "https",
+									"host": [
+										"api",
+										"fjingfjong",
+										"com"
+									],
+									"path": [
+										"player"
+									]
+								},
+								"description": "Get all player entities"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Player",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.fjingfjong.com/player/<GUID>",
+									"protocol": "https",
+									"host": [
+										"api",
+										"fjingfjong",
+										"com"
+									],
+									"path": [
+										"player",
+										"<GUID>"
+									]
+								},
+								"description": "Get a player entity"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Player",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"Name\":<STRING>\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.fjingfjong.com/player",
+									"protocol": "https",
+									"host": [
+										"api",
+										"fjingfjong",
+										"com"
+									],
+									"path": [
+										"player"
+									]
+								},
+								"description": "Create a player entity"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Player",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"Id\": <GUID>,\n\t\"Name\":<STRING>\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.fjingfjong.com/player/<GUID>",
+									"protocol": "https",
+									"host": [
+										"api",
+										"fjingfjong",
+										"com"
+									],
+									"path": [
+										"player",
+										"<GUID>"
+									]
+								},
+								"description": "Update a player entity"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Player",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.fjingfjong.com/player/<GUID>",
+									"protocol": "https",
+									"host": [
+										"api",
+										"fjingfjong",
+										"com"
+									],
+									"path": [
+										"player",
+										"<GUID>"
+									]
+								},
+								"description": "Delete a player entity"
+							},
+							"response": []
+						}
+					],
+					"description": "CRUD Operations for Player entities",
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Match",
+					"item": [
+						{
+							"name": "Get Matches",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.fjingfjong.com/match",
+									"protocol": "https",
+									"host": [
+										"api",
+										"fjingfjong",
+										"com"
+									],
+									"path": [
+										"match"
+									]
+								},
+								"description": "Get all match entities"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Match",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.fjingfjong.com/match/GUID",
+									"protocol": "https",
+									"host": [
+										"api",
+										"fjingfjong",
+										"com"
+									],
+									"path": [
+										"match",
+										"GUID"
+									]
+								},
+								"description": "Get a match entity"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Match",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"TeamOneScore\":<INT>,\n\t\"TeamTwoScore\":<INT>,\n\t\"PlayerOneId\":<GUID>,\n\t\"PlayerTwoId\":<GUID>,\n\t\"PlayerThreeId\":<GUID>,\n\t\"PlayerFourId\":<GUID>\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.fjingfjong.com/match",
+									"protocol": "https",
+									"host": [
+										"api",
+										"fjingfjong",
+										"com"
+									],
+									"path": [
+										"match"
+									]
+								},
+								"description": "Create a match entity"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Match",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"Id\":<GUID>,\n\t\"TeamOneScore\":<INT>,\n\t\"TeamTwoScore\":<INT>,\n\t\"PlayerOneId\":<GUID>,\n\t\"PlayerTwoId\":<GUID>,\n\t\"PlayerThreeId\":<GUID>,\n\t\"PlayerFourId\":<GUID>\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.fjingfjong.com/match/<GUID>",
+									"protocol": "https",
+									"host": [
+										"api",
+										"fjingfjong",
+										"com"
+									],
+									"path": [
+										"match",
+										"<GUID>"
+									]
+								},
+								"description": "Update a match entity"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Match",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://api.fjingfjong.com/match/<GUID>",
+									"protocol": "https",
+									"host": [
+										"api",
+										"fjingfjong",
+										"com"
+									],
+									"path": [
+										"match",
+										"<GUID>"
+									]
+								},
+								"description": "Delete a match entity"
+							},
+							"response": []
+						}
+					],
+					"description": "CRUD Operations for Match entities",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "2808de23-b0b3-4d9d-9447-44171e930e4e",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "fc86256b-cf63-4bce-9b77-8a752d32c74c",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Authenticate",
+					"item": [
+						{
+							"name": "Authenticate",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"API_KEY\":<STRING>\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.fjingfjong.com/authenticate",
+									"protocol": "https",
+									"host": [
+										"api",
+										"fjingfjong",
+										"com"
+									],
+									"path": [
+										"authenticate"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Development",
+			"item": [
+				{
+					"name": "Player",
+					"item": [
+						{
+							"name": "Get Players",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:5004/player",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"player"
+									]
+								},
+								"description": "Get all player entities"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Player",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:5004/player/<GUID>",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"player",
+										"<GUID>"
+									]
+								},
+								"description": "Get a player entity"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Player",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"Name\":<STRING>\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5004/player",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"player"
+									]
+								},
+								"description": "Create a player entity"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Player",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"Id\": <GUID>,\n\t\"Name\":<STRING>\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5004/player/<GUID>",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"player",
+										"<GUID>"
+									]
+								},
+								"description": "Update a player entity"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Player",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5004/player/<GUID>",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"player",
+										"<GUID>"
+									]
+								},
+								"description": "Delete a player entity"
+							},
+							"response": []
+						}
+					],
+					"description": "CRUD Operations for Player entities",
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Match",
+					"item": [
+						{
+							"name": "Get Matches",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:5004/match",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"match"
+									]
+								},
+								"description": "Get all match entities"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Match",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:5004/match/<GUID>",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"match",
+										"<GUID>"
+									]
+								},
+								"description": "Get a match entity"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Match",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"TeamOneScore\":<INT>,\n\t\"TeamTwoScore\":<INT>,\n\t\"PlayerOneId\":<GUID>,\n\t\"PlayerTwoId\":<GUID>,\n\t\"PlayerThreeId\":<GUID>,\n\t\"PlayerFourId\":<GUID>\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5004/match/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"match",
+										""
+									]
+								},
+								"description": "Create a match entity"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Match",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"Id\":<GUID>,\n\t\"TeamOneScore\":<INT>,\n\t\"TeamTwoScore\":<INT>,\n\t\"PlayerOneId\":<GUID>,\n\t\"PlayerTwoId\":<GUID>,\n\t\"PlayerThreeId\":<GUID>,\n\t\"PlayerFourId\":<GUID>\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5004/match/<GUID>",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"match",
+										"<GUID>"
+									]
+								},
+								"description": "Update a match entity"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Match",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:5004/match/<GUID>",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"match",
+										"<GUID>"
+									]
+								},
+								"description": "Delete a match entity"
+							},
+							"response": []
+						}
+					],
+					"description": "CRUD Operations for Match entities",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "2808de23-b0b3-4d9d-9447-44171e930e4e",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "fc86256b-cf63-4bce-9b77-8a752d32c74c",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Authenticate",
+					"item": [
+						{
+							"name": "Authenticate",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"API_KEY\":<STRING>\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5004/authenticate",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"authenticate"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "357cd29e-4746-4fb5-b3e7-cc075719544c",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "b9efbdbb-5ee6-4d1c-8a20-858d725b4640",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
